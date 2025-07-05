@@ -1,4 +1,120 @@
-# Hướng dẫn khắc phục lỗi
+# 🔧 Troubleshooting Guide
+
+## 🐛 Vấn đề thường gặp và cách khắc phục
+
+### 1. **Màn hình trắng (White Screen)**
+
+**Nguyên nhân:** Lỗi routing hoặc JavaScript không load được
+
+**Đã khắc phục:**
+- ✅ Chuyển từ `BrowserRouter` sang `HashRouter`
+- ✅ Loại bỏ base path trong Vite config
+- ✅ Thêm error handling trong main.jsx
+- ✅ Xóa các file routing không cần thiết
+
+**Cách kiểm tra:**
+1. Mở Developer Tools (F12)
+2. Kiểm tra Console tab xem có lỗi không
+3. Kiểm tra Network tab xem file JS có load được không
+
+### 2. **Routing không hoạt động**
+
+**Nguyên nhân:** GitHub Pages không hỗ trợ client-side routing
+
+**Giải pháp:** Sử dụng HashRouter (#)
+- URL sẽ có dạng: `https://domain.com/#/path`
+- Ví dụ: `https://longbdph39071.github.io/shoponilne.github.io/#/shopping`
+
+### 3. **API không hoạt động**
+
+**Nguyên nhân:** Backend chỉ chạy locally
+
+**Giải pháp:**
+```bash
+# Terminal 1 - Chạy backend
+npm run server
+
+# Terminal 2 - Chạy frontend (nếu cần test locally)
+npm run dev
+```
+
+**Lưu ý:** Trên GitHub Pages, API sẽ không hoạt động vì không có backend.
+
+### 4. **Tính năng cần backend:**
+- ✅ Login/Register (cần backend)
+- ✅ Product management (cần backend)
+- ✅ Order management (cần backend)
+- ✅ User management (cần backend)
+
+### 5. **Tính năng hoạt động offline:**
+- ✅ UI/UX
+- ✅ Navigation
+- ✅ Static content
+
+## 🚀 Cách test locally:
+
+### **Chạy đầy đủ (Frontend + Backend):**
+```bash
+# Terminal 1
+npm run server
+
+# Terminal 2
+npm run dev
+```
+
+### **Chỉ test Frontend:**
+```bash
+npm run build
+npm run preview
+```
+
+## 📱 Test trên GitHub Pages:
+
+1. **Truy cập:** https://longbdph39071.github.io/shoponilne.github.io/
+2. **Kiểm tra navigation:** Click các menu
+3. **Kiểm tra routing:** URL sẽ có # (hash)
+4. **Kiểm tra responsive:** Thay đổi kích thước màn hình
+
+## 🔍 Debug steps:
+
+### **Nếu vẫn gặp vấn đề:**
+
+1. **Clear cache:**
+   - Ctrl + F5 (Windows/Linux)
+   - Cmd + Shift + R (Mac)
+
+2. **Kiểm tra console:**
+   - F12 > Console
+   - Tìm lỗi màu đỏ
+
+3. **Kiểm tra network:**
+   - F12 > Network
+   - Xem file nào bị lỗi 404
+
+4. **Test trên browser khác:**
+   - Chrome, Firefox, Safari
+
+## 📞 Báo cáo lỗi:
+
+Nếu vẫn gặp vấn đề, hãy cung cấp:
+1. **Browser:** Chrome/Firefox/Safari + version
+2. **OS:** Windows/Mac/Linux
+3. **Console errors:** Copy lỗi từ F12 > Console
+4. **Steps to reproduce:** Các bước để tái hiện lỗi
+
+## ✅ Checklist trước khi deploy:
+
+- [ ] Test locally với `npm run dev`
+- [ ] Build thành công với `npm run build`
+- [ ] Preview build với `npm run preview`
+- [ ] Deploy với `npm run deploy`
+- [ ] Test trên GitHub Pages
+- [ ] Test responsive design
+- [ ] Test navigation
+
+---
+
+**💡 Tip:** Luôn test locally trước khi deploy để tránh lỗi!
 
 ## Các lỗi thường gặp và cách khắc phục
 
