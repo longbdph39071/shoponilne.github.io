@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }) => {
     } catch (error) {
       return { 
         success: false, 
-        error: error.response?.data?.message || 'Đăng nhập thất bại' 
+        error: error.response?.data?.message || 'Sai tên đăng nhập hoặc mật khẩu'
       };
     }
   };

@@ -4,11 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "db": "npx json-server --watch db.json --port 3001 --middlewares ./node_modules/json-server-auth",
+    "db": "npx json-server --watch db.json --port 3000 --middlewares ./node_modules/json-server-auth",
+    "server": "npx json-server --watch db.json --port 3000 --middlewares ./node_modules/json-server-auth",
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && git add . && git commit -m 'Deploy to GitHub Pages' && git push origin main",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@ant-design/icons": "^6.0.0",

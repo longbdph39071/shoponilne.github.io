@@ -1,155 +1,182 @@
-# Hệ thống quản lý bán hàng
+# 🛍️ Shop Online - React E-commerce Application
 
-Ứng dụng React.js với các module quản lý sản phẩm, đơn hàng, khách hàng và thống kê, cùng với REST API và hệ thống phân quyền.
+A modern e-commerce web application built with React, Ant Design, and JSON Server.
 
-## Tính năng chính
+## 🌟 Features
 
-### Y1 - Module quản lý
-1. **Module quản lý sản phẩm**: Thêm, sửa, xóa và quản lý sản phẩm
-2. **Module quản lý đơn hàng**: Theo dõi và quản lý đơn hàng
-3. **Module quản lý khách hàng**: Thêm mới và quản lý thông tin khách hàng
-4. **Module thống kê**: Hiển thị biểu đồ doanh thu, sản phẩm bán chạy
+### 👤 User Features
+- **User Authentication**: Register, Login, Logout
+- **Product Browsing**: View products with search and filtering
+- **Shopping Cart**: Add/remove items, quantity management
+- **Order Management**: Place orders, view order history
+- **Profile Management**: Update personal information, change password
 
-### Y2 - REST API và phân quyền
-1. **REST API**: Quản lý sản phẩm, đơn hàng, khách hàng
-2. **Phân quyền**: Admin hoặc nhân viên bán hàng
+### 🛒 Shopping Features
+- **Product Catalog**: Browse products by category
+- **Search & Filter**: Find products easily
+- **Cart System**: Manage shopping cart
+- **Checkout Process**: Complete order placement
+- **Order Tracking**: Real-time order status updates
 
-## Công nghệ sử dụng
+### 👨‍💼 Admin Features
+- **Dashboard**: Overview of sales, orders, customers
+- **Product Management**: CRUD operations for products
+- **Order Management**: View and update order status
+- **Customer Management**: View customer information
+- **Order Approval**: Approve/reject pending orders
 
-- **Frontend**: React.js, Ant Design, Recharts
-- **Backend**: JSON Server với JSON Server Auth
-- **Routing**: React Router DOM
-- **State Management**: React Context API
-- **HTTP Client**: Axios
+## 🚀 Quick Start
 
-## Cài đặt và chạy
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-### 1. Cài đặt dependencies
-```bash
-npm install
-```
+### Installation
 
-### 2. Chạy JSON Server (Backend)
-```bash
-npm run db
-```
-Server sẽ chạy tại: http://localhost:3001
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/longbdph39071/shoponilne.github.io.git
+   cd shoponilne.github.io
+   ```
 
-### 3. Chạy ứng dụng React
-```bash
-npm run dev
-```
-Ứng dụng sẽ chạy tại: http://localhost:5173
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-## Tài khoản demo
+3. **Start the backend server**
+   ```bash
+   npm run server
+   # or
+   npx json-server --watch db.json --port 3000 --middlewares ./node_modules/json-server-auth
+   ```
 
-### Admin
-- Email: admin@company.com
-- Password: 123456
-- Quyền: Toàn quyền quản lý hệ thống
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
 
-### Staff
-- Email: staff@company.com
-- Password: 123456
-- Quyền: Xem sản phẩm, khách hàng, đơn hàng và tạo/sửa đơn hàng
+5. **Open your browser**
+   - Frontend: http://localhost:5173
+   - Backend API: http://localhost:3000
 
-## Cấu trúc dự án
+## 📁 Project Structure
 
 ```
 src/
-├── components/          # Components tái sử dụng
-│   └── Layout.jsx      # Layout chính với navigation
-├── contexts/           # React Context
-│   └── AuthContext.jsx # Quản lý authentication và phân quyền
-├── pages/              # Các trang của ứng dụng
-│   ├── Login.jsx       # Trang đăng nhập
-│   ├── Dashboard.jsx   # Trang tổng quan
-│   ├── Products.jsx    # Quản lý sản phẩm
-│   ├── Customers.jsx   # Quản lý khách hàng
-│   ├── Orders.jsx      # Quản lý đơn hàng
-│   ├── Statistics.jsx  # Thống kê và biểu đồ
-│   └── Users.jsx       # Quản lý người dùng (Admin only)
+├── components/          # Reusable components
+│   ├── Layout.jsx      # Main layout component
+│   ├── Navigation.jsx  # Navigation bar
+│   └── ...
+├── pages/              # Page components
+│   ├── Home.jsx        # Home page
+│   ├── Shopping.jsx    # Shopping page
+│   ├── Login.jsx       # Login page
+│   ├── Register.jsx    # Registration page
+│   ├── Profile.jsx     # User profile page
+│   ├── OrderHistory.jsx # Order history page
+│   └── ...
+├── contexts/           # React contexts
+│   └── AuthContext.jsx # Authentication context
 ├── services/           # API services
-│   └── api.js         # Cấu hình API và các hàm gọi API
-└── App.jsx            # Component chính với routing
+│   └── api.js         # API configuration
+└── utils/              # Utility functions
 ```
 
-## API Endpoints
+## 🔧 Available Scripts
 
-### Authentication
-- `POST /login` - Đăng nhập
-- `POST /register` - Đăng ký
-- `POST /logout` - Đăng xuất
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run server` - Start JSON server backend
+- `npm run deploy` - Build and deploy to GitHub Pages
+- `npm run lint` - Run ESLint
+
+## 🌐 API Endpoints
 
 ### Products
-- `GET /products` - Lấy danh sách sản phẩm
-- `GET /products/:id` - Lấy chi tiết sản phẩm
-- `POST /products` - Tạo sản phẩm mới
-- `PUT /products/:id` - Cập nhật sản phẩm
-- `DELETE /products/:id` - Xóa sản phẩm
-
-### Customers
-- `GET /customers` - Lấy danh sách khách hàng
-- `GET /customers/:id` - Lấy chi tiết khách hàng
-- `POST /customers` - Tạo khách hàng mới
-- `PUT /customers/:id` - Cập nhật khách hàng
-- `DELETE /customers/:id` - Xóa khách hàng
-
-### Orders
-- `GET /orders` - Lấy danh sách đơn hàng
-- `GET /orders/:id` - Lấy chi tiết đơn hàng
-- `POST /orders` - Tạo đơn hàng mới
-- `PUT /orders/:id` - Cập nhật đơn hàng
-- `DELETE /orders/:id` - Xóa đơn hàng
-- `PATCH /orders/:id` - Cập nhật trạng thái đơn hàng
+- `GET /products` - Get all products
+- `GET /products/:id` - Get product by ID
+- `POST /products` - Create new product
+- `PUT /products/:id` - Update product
+- `DELETE /products/:id` - Delete product
 
 ### Users
-- `GET /users` - Lấy danh sách người dùng
-- `GET /users/:id` - Lấy chi tiết người dùng
-- `POST /users` - Tạo người dùng mới
-- `PUT /users/:id` - Cập nhật người dùng
-- `DELETE /users/:id` - Xóa người dùng
+- `POST /register` - Register new user
+- `POST /login` - User login
+- `GET /users` - Get all users (admin only)
+- `PATCH /users/:id` - Update user profile
 
-## Phân quyền
+### Orders
+- `GET /orders` - Get all orders
+- `POST /orders` - Create new order
+- `PATCH /orders/:id` - Update order status
 
-### Admin
-- Toàn quyền truy cập tất cả module
-- Quản lý người dùng
-- Xem thống kê chi tiết
+## 👥 Default Users
 
-### Staff
-- Xem sản phẩm
-- Xem khách hàng
-- Xem, tạo, sửa đơn hàng
-- Xem thống kê cơ bản
+### Admin Account
+- **Email**: admin@company.com
+- **Password**: admin123
+- **Role**: admin
 
-## Tính năng nổi bật
+### Staff Account
+- **Email**: staff@company.com
+- **Password**: staff123
+- **Role**: staff
 
-1. **Giao diện hiện đại**: Sử dụng Ant Design với UI/UX tối ưu
-2. **Responsive**: Tương thích với mọi thiết bị
-3. **Biểu đồ tương tác**: Sử dụng Recharts với nhiều loại biểu đồ
-4. **Phân quyền chi tiết**: Kiểm soát quyền truy cập theo từng chức năng
-5. **Validation**: Form validation đầy đủ
-6. **Loading states**: Hiển thị trạng thái loading
-7. **Error handling**: Xử lý lỗi tốt
-8. **Pagination**: Phân trang cho bảng dữ liệu
-9. **Search & Filter**: Tìm kiếm và lọc dữ liệu
-10. **Export/Import**: Hỗ trợ xuất/nhập dữ liệu
+### Customer Account
+- **Email**: bdlbnana06@gmail.com
+- **Password**: customer123
+- **Role**: customer
 
-## Hướng dẫn sử dụng
+## 🎨 Technologies Used
 
-1. **Đăng nhập**: Sử dụng tài khoản demo để đăng nhập
-2. **Dashboard**: Xem tổng quan hệ thống
-3. **Quản lý sản phẩm**: Thêm, sửa, xóa sản phẩm
-4. **Quản lý khách hàng**: Quản lý thông tin khách hàng
-5. **Quản lý đơn hàng**: Tạo và theo dõi đơn hàng
-6. **Thống kê**: Xem biểu đồ doanh thu và sản phẩm bán chạy
-7. **Quản lý người dùng**: Quản lý tài khoản (Admin only)
+- **Frontend**: React 18, Vite
+- **UI Library**: Ant Design
+- **Routing**: React Router DOM
+- **HTTP Client**: Axios
+- **Backend**: JSON Server with Auth
+- **Charts**: Recharts
+- **Icons**: Ant Design Icons
 
-## Lưu ý
+## 🚀 Deployment
 
-- Mật khẩu mặc định cho tài khoản mới: `123456`
-- Dữ liệu được lưu trong file `db.json`
-- Có thể thay đổi cấu hình API trong `src/services/api.js`
-- Đảm bảo JSON Server đang chạy trước khi sử dụng ứng dụng
-# shoponilne.github.io
+### GitHub Pages
+The application is automatically deployed to GitHub Pages when you push to the main branch.
+
+**Live Demo**: https://longbdph39071.github.io/shoponilne.github.io/
+
+### Manual Deployment
+```bash
+npm run build
+npm run deploy
+```
+
+## 🔐 Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+VITE_API_BASE_URL=http://localhost:3000
+VITE_APP_NAME=Shop Online
+```
+
+## 📝 License
+
+This project is licensed under the MIT License.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📞 Support
+
+If you have any questions or need help, please open an issue on GitHub.
+
+---
+
+**Made with ❤️ by Long Bùi**
