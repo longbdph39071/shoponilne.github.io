@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        .status {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        .success { background: rgba(76, 175, 80, 0.3); }
+        .error { background: rgba(244, 67, 54, 0.3); }
+        .info { background: rgba(33, 150, 243, 0.3); }
+        button {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            border: none;
+            padding: 12px 24px;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Debug Test Page</h1>
+        
+        <div class="status info">
+            <h3>📋 System Info</h3>
+            <p><strong>Time:</strong> <span id="time"></span></p>
+            <p><strong>User Agent:</strong> <span id="userAgent"></span></p>
+            <p><strong>Screen:</strong> <span id="screen"></span></p>
+        </div>
+
+        <div class="status info">
+            <h3>🔗 API Test</h3>
+            <button onclick="testAPI()">Test API Connection</button>
+            <div id="apiResult"></div>
+        </div>
+
+        <div class="status info">
+            <h3>🎨 CSS Test</h3>
+            <button onclick="testCSS()">Test CSS Animations</button>
+            <div id="cssResult"></div>
+        </div>
+
+        <div class="status info">
+            <h3>🚀 Navigation</h3>
+            <button onclick="goToReact()">Go to React App</button>
+            <button onclick="goToAPI()">Go to API</button>
+        </div>
+    </div>
+
+    <script>
+        // Update time
+        function updateTime() {
+            document.getElementById('time').textContent = new Date().toLocaleString('vi-VN');
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+
+        // System info
+        document.getElementById('userAgent').textContent = navigator.userAgent;
+        document.getElementById('screen').textContent = `${screen.width}x${screen.height}`;
+
+        // Test API
+        async function testAPI() {
+            const resultDiv = document.getElementById('apiResult');
+            resultDiv.innerHTML = '<p>Testing...</p>';
+            
+            try {
+                const response = await fetch('http://localhost:3000/users');
+                const data = await response.json();
+                resultDiv.innerHTML = `
+                    <div class="status success">
+                        ✅ API Connected Successfully!<br>
+                        Users count: ${data.length}
+                    </div>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <div class="status error">
+                        ❌ API Error: ${error.message}
+                    </div>
+                `;
+            }
+        }
+
+        // Test CSS
+        function testCSS() {
+            const resultDiv = document.getElementById('cssResult');
+            resultDiv.innerHTML = `
+                <div class="status success">
+                    ✅ CSS is working!<br>
+                    <div style="animation: pulse 2s infinite; padding: 10px; background: rgba(255,255,255,0.2); border-radius: 5px; margin-top: 10px;">
+                        Animated Element
+                    </div>
+                </div>
+            `;
+        }
+
+        // Navigation
+        function goToReact() {
+            window.open('http://localhost:5173', '_blank');
+        }
+
+        function goToAPI() {
+            window.open('http://localhost:3000', '_blank');
+        }
+
+        // Auto test on load
+        window.onload = function() {
+            setTimeout(testAPI, 1000);
+            setTimeout(testCSS, 2000);
+        };
+    </script>
+
+    <style>
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+    </style>
+</body>
+</html> 

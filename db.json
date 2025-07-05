@@ -1,0 +1,426 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop Dell XPS 13",
+      "description": "Laptop cao cấp với màn hình 13 inch, chip Intel Core i7, RAM 16GB, SSD 512GB",
+      "category": "Electronics",
+      "price": 25000000,
+      "stock": 15,
+      "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 2,
+      "name": "iPhone 15 Pro",
+      "description": "Điện thoại thông minh mới nhất từ Apple với camera 48MP, chip A17 Pro",
+      "category": "Electronics",
+      "price": 30000000,
+      "stock": 25,
+      "image": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 3,
+      "name": "Samsung Galaxy S24",
+      "description": "Flagship smartphone với camera AI, màn hình 6.2 inch, chip Snapdragon 8 Gen 3",
+      "category": "Electronics",
+      "price": 28000000,
+      "stock": 20,
+      "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 4,
+      "name": "Áo thun nam basic",
+      "description": "Áo thun nam chất liệu cotton 100%, thoáng mát, dễ giặt",
+      "category": "Clothing",
+      "price": 150000,
+      "stock": 100,
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 5,
+      "name": "Quần jean nam slim fit",
+      "description": "Quần jean nam kiểu slim fit, chất liệu denim cao cấp",
+      "category": "Clothing",
+      "price": 450000,
+      "stock": 50,
+      "image": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 6,
+      "name": "Váy đầm nữ dự tiệc",
+      "description": "Váy đầm nữ dự tiệc, thiết kế thanh lịch, phù hợp nhiều dịp",
+      "category": "Clothing",
+      "price": 800000,
+      "stock": 30,
+      "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 7,
+      "name": "Giày thể thao Nike Air Max",
+      "description": "Giày thể thao Nike Air Max, công nghệ Air Max, thoải mái khi đi",
+      "category": "Shoes",
+      "price": 2500000,
+      "stock": 40,
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 8,
+      "name": "Túi xách nữ thời trang",
+      "description": "Túi xách nữ thời trang, chất liệu da tổng hợp, thiết kế hiện đại",
+      "category": "Accessories",
+      "price": 1200000,
+      "stock": 25,
+      "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 9,
+      "name": "Đồng hồ thông minh Apple Watch",
+      "description": "Đồng hồ thông minh Apple Watch Series 9, theo dõi sức khỏe",
+      "category": "Electronics",
+      "price": 12000000,
+      "stock": 15,
+      "image": "https://images.unsplash.com/photo-1544117519-31a4b719223d?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 10,
+      "name": "Tai nghe không dây Sony WH-1000XM4",
+      "description": "Tai nghe không dây Sony với công nghệ chống ồn hàng đầu",
+      "category": "Electronics",
+      "price": 8500000,
+      "stock": 20,
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Nguyễn Văn An",
+      "email": "nguyenvanan@email.com",
+      "phone": "0901234567",
+      "address": "123 Đường ABC, Phường 1, Quận 1, TP.HCM",
+      "createdAt": "2024-01-10T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Trần Thị Bình",
+      "email": "tranthibinh@email.com",
+      "phone": "0909876543",
+      "address": "456 Đường XYZ, Phường 3, Quận 3, TP.HCM",
+      "createdAt": "2024-01-12T10:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "Lê Văn Cường",
+      "email": "levancuong@email.com",
+      "phone": "0912345678",
+      "address": "789 Đường DEF, Phường 5, Quận 5, TP.HCM",
+      "createdAt": "2024-01-15T10:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "name": "Phạm Thị Dung",
+      "email": "phamthidung@email.com",
+      "phone": "0923456789",
+      "address": "321 Đường GHI, Phường 7, Quận 7, TP.HCM",
+      "createdAt": "2024-01-18T10:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "name": "Hoàng Văn Em",
+      "email": "hoangvanem@email.com",
+      "phone": "0934567890",
+      "address": "654 Đường JKL, Phường 9, Quận 9, TP.HCM",
+      "createdAt": "2024-01-20T10:00:00.000Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "customerName": "Nguyễn Văn An",
+      "customerEmail": "nguyenvanan@email.com",
+      "customerPhone": "0901234567",
+      "customerAddress": "123 Đường ABC, Phường 1, Quận 1, TP.HCM",
+      "items": [
+        {
+          "productId": 1,
+          "productName": "Laptop Dell XPS 13",
+          "quantity": 1,
+          "price": 25000000
+        }
+      ],
+      "totalAmount": 25000000,
+      "status": "completed",
+      "orderDate": "2024-01-20T10:00:00.000Z",
+      "createdAt": "2024-01-20T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "customerId": 2,
+      "customerName": "Trần Thị Bình",
+      "customerEmail": "tranthibinh@email.com",
+      "customerPhone": "0909876543",
+      "customerAddress": "456 Đường XYZ, Phường 3, Quận 3, TP.HCM",
+      "items": [
+        {
+          "productId": 2,
+          "productName": "iPhone 15 Pro",
+          "quantity": 1,
+          "price": 30000000
+        },
+        {
+          "productId": 3,
+          "productName": "Samsung Galaxy S24",
+          "quantity": 1,
+          "price": 28000000
+        }
+      ],
+      "totalAmount": 58000000,
+      "status": "pending",
+      "orderDate": "2024-01-21T10:00:00.000Z",
+      "createdAt": "2024-01-21T10:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "customerName": "Long Bùi",
+      "customerEmail": "longbdph39071@fpt.edu.vn",
+      "customerPhone": "0969860201",
+      "customerAddress": "193 Định Công Hạ, Hoàng Mai, Hà Nội",
+      "items": [
+        {
+          "productId": 2,
+          "productName": "iPhone 15 Pro",
+          "quantity": 2,
+          "price": 30000000
+        }
+      ],
+      "totalAmount": 60000000,
+      "status": "completed",
+      "orderDate": "2024-07-05T17:01:36.832Z"
+    },
+    {
+      "id": 4,
+      "customerName": "Nguyễn Thị Hương",
+      "customerEmail": "nguyenthihuong@email.com",
+      "customerPhone": "0945678901",
+      "customerAddress": "456 Đường MNO, Phường 11, Quận 11, TP.HCM",
+      "items": [
+        {
+          "productId": 4,
+          "productName": "Áo thun nam basic",
+          "quantity": 3,
+          "price": 150000
+        },
+        {
+          "productId": 5,
+          "productName": "Quần jean nam slim fit",
+          "quantity": 2,
+          "price": 450000
+        }
+      ],
+      "totalAmount": 1350000,
+      "status": "shipped",
+      "orderDate": "2024-07-06T09:30:00.000Z"
+    },
+    {
+      "id": 5,
+      "customerName": "Lê Văn Minh",
+      "customerEmail": "levanminh@email.com",
+      "customerPhone": "0956789012",
+      "customerAddress": "789 Đường PQR, Phường 13, Quận 13, TP.HCM",
+      "items": [
+        {
+          "productId": 7,
+          "productName": "Giày thể thao Nike Air Max",
+          "quantity": 1,
+          "price": 2500000
+        },
+        {
+          "productId": 8,
+          "productName": "Túi xách nữ thời trang",
+          "quantity": 1,
+          "price": 1200000
+        }
+      ],
+      "totalAmount": 3700000,
+      "status": "processing",
+      "orderDate": "2024-07-06T14:15:00.000Z"
+    },
+    {
+      "id": 6,
+      "customerName": "Trần Thị Lan",
+      "customerEmail": "tranthilan@email.com",
+      "customerPhone": "0967890123",
+      "customerAddress": "321 Đường STU, Phường 15, Quận 15, TP.HCM",
+      "items": [
+        {
+          "productId": 9,
+          "productName": "Đồng hồ thông minh Apple Watch",
+          "quantity": 1,
+          "price": 12000000
+        }
+      ],
+      "totalAmount": 12000000,
+      "status": "awaiting_approval",
+      "orderDate": "2024-07-06T16:45:00.000Z"
+    },
+    {
+      "id": 7,
+      "customerName": "Phạm Văn Tuấn",
+      "customerEmail": "phamvantuan@email.com",
+      "customerPhone": "0978901234",
+      "customerAddress": "654 Đường VWX, Phường 17, Quận 17, TP.HCM",
+      "items": [
+        {
+          "productId": 10,
+          "productName": "Tai nghe không dây Sony WH-1000XM4",
+          "quantity": 1,
+          "price": 8500000
+        },
+        {
+          "productId": 6,
+          "productName": "Váy đầm nữ dự tiệc",
+          "quantity": 1,
+          "price": 800000
+        }
+      ],
+      "totalAmount": 9300000,
+      "status": "delivered",
+      "orderDate": "2024-07-06T18:20:00.000Z"
+    },
+    {
+      "id": 8,
+      "customerName": "Hoàng Thị Mai",
+      "customerEmail": "hoangthimai@email.com",
+      "customerPhone": "0989012345",
+      "customerAddress": "987 Đường YZA, Phường 19, Quận 19, TP.HCM",
+      "items": [
+        {
+          "productId": 1,
+          "productName": "Laptop Dell XPS 13",
+          "quantity": 1,
+          "price": 25000000
+        },
+        {
+          "productId": 9,
+          "productName": "Đồng hồ thông minh Apple Watch",
+          "quantity": 1,
+          "price": 12000000
+        }
+      ],
+      "totalAmount": 37000000,
+      "status": "cancelled",
+      "orderDate": "2024-07-06T20:10:00.000Z"
+    },
+    {
+      "customerName": "DLong1",
+      "customerEmail": "bdlbnana06@gmail.com",
+      "customerPhone": "0998766666",
+      "customerAddress": "123",
+      "items": [
+        {
+          "productId": 3,
+          "productName": "Samsung Galaxy S24",
+          "quantity": 1,
+          "price": 28000000
+        }
+      ],
+      "totalAmount": 28000000,
+      "status": "awaiting_approval",
+      "orderDate": "2025-07-05T20:02:01.417Z",
+      "id": 9
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@company.com",
+      "password": "$2a$10$OTb1Gpn0eVUjEmCfXgCae.f8dscdZPOM6/j36KF8.D6D/Pj452eVu",
+      "name": "Admin User",
+      "role": "admin",
+      "phone": "0901234567",
+      "address": "123 Đường Admin, Quận 1, TP.HCM"
+    },
+    {
+      "id": 2,
+      "email": "staff@company.com",
+      "password": "$2a$10$Kc9JjIecZRZIFDV0npzdfurlVr2l2RSUr7UkDQLw6YkBjZAyNn2OK",
+      "name": "Staff User",
+      "role": "staff",
+      "phone": "0909876543",
+      "address": "456 Đường Staff, Quận 3, TP.HCM"
+    },
+    {
+      "id": 4,
+      "email": "nguyenvanan@email.com",
+      "password": "$2a$10$kgZqULByiF9vbe14mdHJ4Of/ovIl6Tq3W148XuWZ.KN8RcCaFmRkO",
+      "name": "Nguyễn Văn An",
+      "phone": "0901234567",
+      "address": "123 Đường ABC, Phường 1, Quận 1, TP.HCM",
+      "role": "customer"
+    },
+    {
+      "id": 5,
+      "email": "tranthibinh@email.com",
+      "password": "$2a$10$kgZqULByiF9vbe14mdHJ4Of/ovIl6Tq3W148XuWZ.KN8RcCaFmRkO",
+      "name": "Trần Thị Bình",
+      "phone": "0909876543",
+      "address": "456 Đường XYZ, Phường 3, Quận 3, TP.HCM",
+      "role": "customer"
+    },
+    {
+      "id": 6,
+      "email": "nguyenthihuong@email.com",
+      "password": "$2a$10$kgZqULByiF9vbe14mdHJ4Of/ovIl6Tq3W148XuWZ.KN8RcCaFmRkO",
+      "name": "Nguyễn Thị Hương",
+      "phone": "0945678901",
+      "address": "456 Đường MNO, Phường 11, Quận 11, TP.HCM",
+      "role": "customer"
+    },
+    {
+      "id": 7,
+      "email": "levanminh@email.com",
+      "password": "$2a$10$kgZqULByiF9vbe14mdHJ4Of/ovIl6Tq3W148XuWZ.KN8RcCaFmRkO",
+      "name": "Lê Văn Minh",
+      "phone": "0956789012",
+      "address": "789 Đường PQR, Phường 13, Quận 13, TP.HCM",
+      "role": "customer"
+    },
+    {
+      "id": 8,
+      "email": "tranthilan@email.com",
+      "password": "$2a$10$kgZqULByiF9vbe14mdHJ4Of/ovIl6Tq3W148XuWZ.KN8RcCaFmRkO",
+      "name": "Trần Thị Lan",
+      "phone": "0967890123",
+      "address": "321 Đường STU, Phường 15, Quận 15, TP.HCM",
+      "role": "customer"
+    },
+    {
+      "id": 9,
+      "email": "phamvantuan@email.com",
+      "password": "$2a$10$kgZqULByiF9vbe14mdHJ4Of/ovIl6Tq3W148XuWZ.KN8RcCaFmRkO",
+      "name": "Phạm Văn Tuấn",
+      "phone": "0978901234",
+      "address": "654 Đường VWX, Phường 17, Quận 17, TP.HCM",
+      "role": "customer"
+    },
+    {
+      "id": 10,
+      "email": "hoangthimai@email.com",
+      "password": "$2a$10$kgZqULByiF9vbe14mdHJ4Of/ovIl6Tq3W148XuWZ.KN8RcCaFmRkO",
+      "name": "Hoàng Thị Mai",
+      "phone": "0989012345",
+      "address": "987 Đường YZA, Phường 19, Quận 19, TP.HCM",
+      "role": "customer"
+    },
+    {
+      "email": "bdlbnana06@gmail.com",
+      "password": "$2a$10$7d6EoXYxwMN76pDovms90e1iazd2ayGnawit0AIR.anr/WbNF.zbe",
+      "name": "DUYLONG",
+      "phone": "1234567890",
+      "address": "35 dinh cong thuong",
+      "role": "customer",
+      "id": 11
+    }
+  ]
+}
